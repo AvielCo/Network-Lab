@@ -1,0 +1,20 @@
+﻿@model lab3.Models.Test
+
+@{
+    ViewBag.Title = "Submit";
+}
+
+<h5>
+    <form action="Submit" method="post">
+        First Name = <input id="Text1" name="FirstName" value=@Model.FirstName type="text" />@Html.ValidationMessageFor(model => model.FirstName)
+        <br />
+        Last Name = <input id="Text2" name="LastName" value=@Model.LastName type="text" />@Html.ValidationMessageFor(model => model.LastName)
+        <br />
+        Mail = <input id="Text3" name="Email" value=@Model.Email type="text" />@Html.ValidationMessageFor(model => model.Email)
+        <br />
+        Phone = <input id="Text4" name="Phone" value=@Model.Phone type="text" />@Html.ValidationMessageFor(model => model.Phone)
+        <br />
+        <input id="Button1" type="submit" value="Change" />
+    </form>
+</h5>
+
